@@ -192,36 +192,45 @@ const descriptions = {
 
 /* ─── 관련 리포트 데이터 ─── */
 const reports = {
- TSLL:[
-   {title:'서울식품, OEM·B2B 다각화로 실적 개선 기대', firm:'KB증권'},
-   {title:'소비 트렌드 변화 수혜 전망', firm:'NH투자증권'}
- ],
- SOXL:[
-   {title:'성신양회, 시멘트 가격 인상 효과 본격화', firm:'하나증권'}
- ],
- TSLA:[
-   {title:'유유제약, 신약 파이프라인 가치 재평가', firm:'미래에셋'},
-   {title:'R&D 모멘텀 점검', firm:'신한투자증권'}
- ]
- /* SANGJI · NVDA는 리포트 없음 */
+  TSLL:[
+    {title:'서울식품, OEM·B2B 다각화로 실적 개선 기대', firm:'KB증권',
+     url:'https://aj-114.github.io/nh/bullet1_1.html'},
+    {title:'소비 트렌드 변화 수혜 전망', firm:'NH투자증권',
+     url:'https://aj-114.github.io/nh/bullet1_1.html'}
+  ],
+  SOXL:[
+    {title:'성신양회, 시멘트 가격 인상 효과 본격화', firm:'하나증권',
+     url:'https://aj-114.github.io/nh/bullet1_1.html'}
+  ],
+  TSLA:[
+    {title:'유유제약, 신약 파이프라인 가치 재평가', firm:'미래에셋',
+     url:'https://aj-114.github.io/nh/bullet1_1.html'},
+    {title:'R&D 모멘텀 점검', firm:'신한투자증권',
+     url:'https://aj-114.github.io/nh/bullet1_1.html'}
+  ]
+  /* SANGJI · NVDA 없음 */
 };
 
-/* ─── 클릭 시 출력 ─── */
+/* ─── 클릭 시 설명 + 링크 출력 ─── */
 function show(key){
- const desc = descriptions[key] || '요약 데이터가 없습니다.';
- const list = reports[key];
+  const desc  = descriptions[key] ?? '요약 데이터가 없습니다.';
+  const list  = reports[key];
 
- let html = desc + '<hr style="border:0;border-top:1px solid #333;margin:18px 0">';
- if(list && list.length){
-   html += '<strong>관련 리포트</strong><ul style="margin-top:10px;display:grid;row-gap:6px">';
-   list.forEach(r=>{
-     html += `<li>• ${r.title} <span style="color:var(--txt-sub)">(${r.firm})</span></li>`;
-   });
-   html += '</ul>';
- }else{
-   html += '<span style="color:var(--txt-sub)">관련 리포트가 없습니다.</span>';
- }
- document.getElementById('descBox').innerHTML = html;
+  let html = `${desc}
+              <hr style="border:0;border-top:1px solid #333;margin:18px 0">`;
+
+  if (list?.length){
+    html += '<strong>관련 리포트</strong><ul style="margin-top:10px;display:grid;row-gap:6px">';
+    list.forEach(r=>{
+      html += `<li>• <a href="${r.url}" style="color:inherit;text-decoration:none">
+                 ${r.title}</a><span style="color:var(--txt-sub)"> (${r.firm})</span></li>`;
+    });
+    html += '</ul>';
+  }else{
+    html += '<span style="color:var(--txt-sub)">관련 리포트가 없습니다.</span>';
+  }
+
+  document.getElementById('descBox').innerHTML = html;
 }
 </script>
 
