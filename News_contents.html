@@ -43,7 +43,11 @@ img.responsive{width:100%;max-width:680px;
 }
 .report-title{font-size:1.05rem;font-weight:700;margin-bottom:18px}
 .report-list{display:grid;row-gap:12px}
-.report-item{font-size:.95rem;line-height:1.5}
+.report-link{
+  display:inline-block;color:var(--txt);text-decoration:none;
+  transition:color .25s;
+}
+.report-link:hover{color:var(--accent)}
 .report-firm{color:var(--txt-sub);font-size:.85rem;margin-left:6px}
 
 /* ───── 반응형 ───── */
@@ -92,9 +96,9 @@ a:focus-visible{outline:2px dashed var(--accent);outline-offset:2px}
   <section class="report-box">
     <h2 class="report-title">관련 리포트</h2>
     <ul class="report-list">
-      <li class="report-item">성신양회, 시멘트 가격 인상 효과 본격화<span class="report-firm"> (하나증권)</span></li>
-      <li class="report-item">한화솔루션, AMPC 혜택으로 실적 턴어라운드 기대<span class="report-firm"> (NH투자증권)</span></li>
-      <li class="report-item">태양광 시장 성장률 재조명<span class="report-firm"> (미래에셋)</span></li>
+      <li><a href="https://example.com/report1" target="_blank" class="report-link">성신양회, 시멘트 가격 인상 효과 본격화<span class="report-firm"> (하나증권)</span></a></li>
+      <li><a href="https://example.com/report2" target="_blank" class="report-link">한화솔루션, AMPC 혜택으로 실적 턴어라운드 기대<span class="report-firm"> (NH투자증권)</span></a></li>
+      <li><a href="https://example.com/report3" target="_blank" class="report-link">태양광 시장 성장률 재조명<span class="report-firm"> (미래에셋)</span></a></li>
     </ul>
   </section>
 
