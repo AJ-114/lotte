@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BuzzBit – 뉴스 상세</title>
+
+<style>
+/* ───── 다크 테마 토큰 ───── */
+:root{
+  --bg:#0e0e0e;          /* 전체 배경 */
+  --txt:#f4f4f5;         /* 기본 텍스트 */
+  --txt-sub:#a1a1aa;     /* 서브 텍스트 */
+  --card:#1a1a1a;        /* 카드/본문 배경 */
+  --card-hover:#222;     /* 호버 */
+  --accent:#0ea5e9;      /* 링크 · 포커스 */
+  --border:#27272a;
+  --radius:14px;
+}
+
+/* ───── Reset & Base ───── */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--bg);color:var(--txt);
+  font-family:'Pretendard','Noto Sans KR',sans-serif;
+  line-height:1.7;padding:24px
+}
+h1{font-size:clamp(1.4rem,4vw,1.9rem);font-weight:700;
+   margin-bottom:10px;word-break:keep-all}
+.meta{font-size:.85rem;color:var(--txt-sub);margin-bottom:28px}
+
+p{margin-bottom:18px;word-break:keep-all}
+figure{margin:34px 0;text-align:center}
+figcaption{font-size:.75rem;color:var(--txt-sub);margin-top:8px}
+
+img.responsive{width:100%;max-width:680px;
+  height:auto;border-radius:var(--radius);object-fit:cover;box-shadow:0 4px 10px rgba(0,0,0,.4)}
+
+/* ───── 관련 리포트 ───── */
+.report-box{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);padding:26px;margin-top:48px
+}
+.report-title{font-size:1.05rem;font-weight:700;margin-bottom:18px}
+.report-list{display:grid;row-gap:12px}
+.report-item{font-size:.95rem;line-height:1.5}
+.report-firm{color:var(--txt-sub);font-size:.85rem;margin-left:6px}
+
+/* ───── 반응형 ───── */
+@media(min-width:768px){
+  body{padding:40px}
+}
+
+/* ───── 포커스 상태 ───── */
+a:focus-visible{outline:2px dashed var(--accent);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<main style="max-width:760px;margin:0 auto">
+
+  <!-- ───── 제목/메타 ───── -->
+  <article>
+    <h1>한화솔루션, 1Q 영업익 303억원 ‘흑자전환’… 美 태양광 호조 덕</h1>
+    <div class="meta">2025년 04월 24일 14:51 · 뉴스핌</div>
+
+    <!-- ───── 본문 ───── -->
+    <p>[서울=뉴스핌] 정탁훈 기자 = 한화솔루션이 석유화학업황 침체에도 태양광 사업 호조로 올해 1분기 전년 대비 흑자전환에 성공했다. 특히 미국에서 주택용 태양광에너지 사업 호조세가 2분기 이후에도 지속되며 실적 개선세를 이끌 전망이다.</p>
+
+    <p>한화솔루션은 올해 1분기 연결 기준 매출 3조945억원, 영업이익 303억원을 각각 기록했다고 24일 밝혔다. 매출은 전년 동기 대비 31.4% 증가했고, 영업이익은 흑자전환했다.</p>
+
+    <p>사업 부문별로 보면, 신재생에너지(태양광) 부문은 매출 1조5992억원, 영업이익 1362억원을 기록했다. 미국 주택용 에너지 사업이 수익성 개선을 주도하면서 매출과 영업이익 모두 전년 동기보다 증가했다.</p>
+
+    <!-- 이미지 -->
+    <figure>
+      <img src="https://images.unsplash.com/photo-1576666735065-b24beb27b939?q=80&w=1600&auto=format" alt="한화솔루션 사옥" class="responsive">
+      <figcaption>서울 장교동 한화빌딩 [사진=한화]</figcaption>
+    </figure>
+
+    <p>미국 인플레이션 감축법에 따른 청정세액공제(AMPC) 혜택과 관련 “올해 1분기 AMPC는 1839억원으로 전분기와 유사한 수준”이라며 “2분기는 2000억원대 초반을 예상하고 있다”고 밝혔다.</p>
+
+    <p>또 미국 주택용 태양광에너지 사업 관련 “2035년까지 연 평균 8% 성장을 예상한다”며 “올해 1분기에 22%의 성장세를 기록했고, 중장기적으로 지속적인 성장을 기대하고 있다”고 밝혔다.</p>
+
+    <p>케미칼 부문은 매출 1조736억원, 영업손실 912억원을 기록했다. 주요 제품의 공급과잉이 지속되면서 판매가격이 하락했고 대규모 정기보수가 진행되면서 수익성이 둔화됐다.</p>
+
+    <p>첨단소재 부문은 매출 2738억원, 영업손실 18억원을 기록했다. 경량복합소재 원가 상승 부담이 있었지만 미국 태양광 소재 신공장 가동률 향상 등이 복합적으로 영향을 미쳤다.</p>
+
+    <p>최고재무책임자(CFO) 윤안식 부사장은 “2분기에는 모듈 판가 상승 및 판매량 증가가 예상됨에 따라 신재생에너지 부문의 영업이익이 증가세에 이어질 것”이라며 “개발자산 매각 및 EPC 사업 매출은 2분기 4000~5000억원을 목표로 하고 있다”고 밝혔다.</p>
+  </article>
+
+  <!-- ───── 관련 리포트 ───── -->
+  <section class="report-box">
+    <h2 class="report-title">관련 리포트</h2>
+    <ul class="report-list">
+      <li class="report-item">성신양회, 시멘트 가격 인상 효과 본격화<span class="report-firm"> (하나증권)</span></li>
+      <li class="report-item">한화솔루션, AMPC 혜택으로 실적 턴어라운드 기대<span class="report-firm"> (NH투자증권)</span></li>
+      <li class="report-item">태양광 시장 성장률 재조명<span class="report-firm"> (미래에셋)</span></li>
+    </ul>
+  </section>
+
+</main>
+</body>
+</html>
