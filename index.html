@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BuzzBit – 급상승 뉴스 & 커뮤니티</title>
+
+<style>
+/* ───── 디자인 토큰 ───── */
+:root{
+  --bg:#0e0e0e;      /* 페이지 배경 */
+  --card:#1a1a1a;    /* 카드 배경 */
+  --txt:#ffffff;     /* 기본 텍스트 */
+  --txt-sub:#9ea0a4; /* 보조 텍스트 */
+  --accent:#3ea6ff;  /* 링크·포커스 */
+  --pos:#35a0ff;     /* 긍정 */
+  --neu:#9ea0a4;     /* 중립 */
+  --neg:#ff4b4b;     /* 부정 */
+  --radius:12px;
+  --shadow:0 1px 3px rgba(0,0,0,.25);
+}
+
+/* ───── Reset & Base ───── */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--bg);color:var(--txt);
+  font-family:'Pretendard','Noto Sans KR',sans-serif;
+  line-height:1.45;padding:24px
+}
+h1,h2{font-weight:700;word-break:keep-all}
+h1{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:28px}
+h2{font-size:1.25rem;margin:40px 0 16px}
+ul{list-style:none}
+.section{max-width:720px;margin:0 auto}
+
+/* ───── 카드 공통 ───── */
+.card{
+  background:var(--card);border-radius:var(--radius);
+  padding:18px;display:flex;gap:16px;align-items:flex-start;
+  transition:background .25s;box-shadow:var(--shadow)
+}
+.card:hover{background:#222}
+.thumb,.icon{
+  width:72px;height:72px;flex-shrink:0;object-fit:cover;
+  border-radius:9px
+}
+.content{flex:1;min-width:0}
+.headline{
+  font-size:1rem;font-weight:500;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+  overflow:hidden;word-break:keep-all
+}
+.meta{margin-top:6px;font-size:.85rem;color:var(--txt-sub)}
+a.card-link{display:flex;gap:16px;width:100%;text-decoration:none;color:inherit}
+a.card-link:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* ───── 커뮤니티 배지 ───── */
+.rank{
+  width:28px;height:28px;border-radius:50%;display:flex;
+  align-items:center;justify-content:center;font-size:.8rem;
+  font-weight:600;background:#444;margin-right:10px
+}
+.sent{font-weight:600}.pos{color:var(--pos)}.neu{color:var(--neu)}.neg{color:var(--neg)}
+
+/* ───── 커뮤니티 설명 박스 ───── */
+.desc-box{
+  background:var(--card);border-radius:var(--radius);
+  padding:18px;margin-top:20px;box-shadow:var(--shadow);
+  font-size:.9rem;line-height:1.6
+}
+.hashtag{color:var(--accent);margin-right:6px}
+
+/* ───── 데스크톱(≥768px) ───── */
+@media(min-width:768px){
+  body{padding:40px}
+  .thumb,.icon{order:-1;width:84px;height:84px}
+  .headline{font-size:1.05rem}
+}
+</style>
+</head>
+<body>
+
+<div class="section">
+
+  <!-- ▲ 뉴스 섹션 -->
+  <h1>2025년 4월 24일<br>인기 급상승 뉴스 🔥</h1>
+  <ul class="news-list" style="display:grid;row-gap:16px">
+
+    <li class="card">
+      <a class="card-link" href="#1" aria-label="해상풍력 시공 첫 성공 LS마린솔루션, 글로벌 진출 박차">
+        <img class="thumb" src="https://images.unsplash.com/photo-1659292080999-1de5b7a915b3?q=80&w=400&auto=format" alt="">
+        <div class="content">
+          <p class="headline">해상풍력 시공 첫 성공 LS마린솔루션, 글로벌 진출 박차</p>
+          <p class="meta">1일 전 · 서울경제</p>
+        </div>
+      </a>
+    </li>
+
+    <li class="card">
+      <a class="card-link" href="#2">
+        <img class="thumb" src="https://images.unsplash.com/photo-1608889476561-6242cfdbf622?q=80&w=400&auto=format" alt="">
+        <div class="content">
+          <p class="headline">[0423개장체크] 백악관 “무역 협상 긍정적”… 美中 관계 완화 기대감에 증시 훈풍</p>
+          <p class="meta">1일 전 · 인포스탁데일리</p>
+        </div>
+      </a>
+    </li>
+
+    <li class="card">
+      <a class="card-link" href="#3">
+        <img class="thumb" src="https://images.unsplash.com/photo-1674515489647-fd8f76b86f65?q=80&w=400&auto=format" alt="">
+        <div class="content">
+          <p class="headline">[0418개장체크] 트럼프, 파월 의장 해임 시사… 금리 인하 압박</p>
+          <p class="meta">6일 전 · 인포스탁데일리</p>
+        </div>
+      </a>
+    </li>
+
+    <li class="card">
+      <a class="card-link" href="#4">
+        <img class="thumb" src="https://images.unsplash.com/photo-1576666735065-b24beb27b939?q=80&w=400&auto=format" alt="">
+        <div class="content">
+          <p class="headline">[0416개장체크] 美 제조업, 2개월 연속 위축… 회복세 여전히 더뎌</p>
+          <p class="meta">4월 16일 · 인포스탁데일리</p>
+        </div>
+      </a>
+    </li>
+
+    <li class="card">
+      <a class="card-link" href="#5">
+        <img class="thumb" src="https://images.unsplash.com/photo-1583857671904-a716bf4ee5d8?q=80&w=400&auto=format" alt="">
+        <div class="content">
+          <p class="headline">[0408개장체크] 美 증시 혼조 마감… 트럼프 관세 충격 속 저가 매수 유입</p>
+          <p class="meta">4월 8일 · 인포스탁데일리</p>
+        </div>
+      </a>
+    </li>
+
+    <li class="card">
+      <a class="card-link" href="#6">
+        <img class="thumb" src="https://images.unsplash.com/photo-1700847304964-9fe563059742?q=80&w=400&auto=format" alt="">
+        <div class="content">
+          <p class="headline">‘검은 월요일’ 여파에… 공매도 과열종목, 재개 이후 최다인 45개 지정</p>
+          <p class="meta">4월 7일 · 조선비즈</p>
+        </div>
+      </a>
+    </li>
+
+    <li class="card">
+      <a class="card-link" href="#7">
+        <img class="thumb" src="https://images.unsplash.com/photo-1648020265916-7d1d3a183a4c?q=80&w=400&auto=format" alt="">
+        <div class="content">
+          <p class="headline">동해로 가는 LS에코에너지 “해저케이블 사업 확대”</p>
+          <p class="meta">4월 3일 · 서울경제</p>
+        </div>
+      </a>
+    </li>
+  </ul>
+
+ <!-- ▼ 커뮤니티 섹션 ------------------------------------------------ -->
+ <h2>관심 급상승 커뮤니티</h2>
+ <p class="meta">오늘 13:16 기준</p>
+
+ <ul class="comm-list" style="display:grid;row-gap:12px;margin-top:12px">
+   <li class="card" onclick="show('TSLL')"><div class="rank">1</div><div class="content"><p class="headline">서울식품</p></div><div class="sent pos">긍정</div></li>
+   <li class="card" onclick="show('SOXL')"><div class="rank">2</div><div class="content"><p class="headline">성신양회</p></div><div class="sent neu">중립</div></li>
+   <li class="card" onclick="show('TSLA')"><div class="rank">3</div><div class="content"><p class="headline">유유제약</p></div><div class="sent neg">부정</div></li>
+   <li class="card" onclick="show('SANGJI')"><div class="rank">4</div><div class="content"><p class="headline">상지건설</p></div><div class="sent neu">중립</div></li>
+   <li class="card" onclick="show('NVDA')"><div class="rank">5</div><div class="content"><p class="headline">한양증권</p></div><div class="sent pos">긍정</div></li>
+ </ul>
+
+ <!-- ▼ 설명 + 리포트 박스 ------------------------------------------- -->
+ <div id="descBox" class="desc-box">
+   항목을 터치하면 상세 토론 요약이 표시됩니다.
+ </div>
+
+</div>
+
+<script>
+/* ─── 토론 요약 (전체 문구) ─── */
+const descriptions = {
+ TSLL:`이 토론글은 대부분 투자자들이 특정 주식의 상승 가능성에 대해 기대와 희망을 품고 있다는 점에서 긍정적인 전망을 보여줍니다. 투자자들은 정책 호재, 시장의 강한 매수세, 기관과 대형주주의 매수 움직임에 주목하며 기대심리를 드러내고 있습니다. 특히 4년 주기 떡상, 대장주 움직임, 밸류업 기대 등 장기적인 상승 전망을 지지하는 논리도 포함되어 있어 시장의 낙관적 심리를 반영합니다. 이러한 기대감은 투자자들이 자신감과 희망을 가지고 적극적으로 매수 공세에 나서는 모습에서 보입니다.<br><br><span class="hashtag">#상승기대</span><span class="hashtag">#강한매수세</span><span class="hashtag">#정책기대감</span><span class="hashtag">#테마주관심</span><span class="hashtag">#거래량증가</span>`,
+
+ SOXL:`많은 사람들이 세종시 행정수도 이전과 관련된 정책 기대와 기대감에 대해 긍정적인 심리를 보이고 있습니다. 정책 발표와 함께 관련 주식들이 강하게 반등하며 투자 기대가 높아지고, 대선과 정부 정책이 시장에 미치는 영향을 신뢰하는 모습이 강하게 드러납니다. 특히, 세종시 부지와 관련 기업들이 앞으로의 성장 가능성으로 인해 투자자들의 관심을 받고 있으며, 정부의 적극적인 추진으로 시장의 기대감이 확산되고 있습니다. 또한, 자산 가치 상승에 따른 부동산 및 관련 산업의 호재 가능성도 함께 기대하는 모습이 일관된 긍정 심리로 나타납니다.<br><br><span class="hashtag">#세종시정책기대</span><span class="hashtag">#관련주상승기대</span><span class="hashtag">#행정수도이전기대감</span><span class="hashtag">#부동산및자산가치상승</span><span class="hashtag">#대선영향력</span><span class="hashtag">#정책수혜기대</span>`,
+
+ TSLA:`이 토론글은 투자자들이 시장의 호재와 기대를 바탕으로 긍정적인 전망을 공유하고 있음을 보여줍니다. 거래량이 늘어나며 거래세력의 움직임이 활발해지고 있고, 우선주와 전환사채의 오버행 우려가 해소되면서 주가 상승 기대감이 높아지고 있습니다. 또한, 내일 배당과 주주환원 정책에 대한 기대도 투자심리를 긍정적으로 만드는데 기여하고 있습니다. 한동훈 테마 역시 강세를 보이고 있어 특정 인물이나 정책에 대한 기대심리도 함께 작용하고 있는 것으로 보입니다. 이러한 요소들이 모여 시장의 전반적인 긍정적 분위기를 형성하는 것으로 분석됩니다.<br><br><span class="hashtag">#주가상승기대</span><span class="hashtag">#거래량증가</span><span class="hashtag">#주주환원정책</span><span class="hashtag">#배당기대</span><span class="hashtag">#특정인물테마</span><span class="hashtag">#우선주강세</span><span class="hashtag">#시장관심도높음</span>`,
+
+ SANGJI:`이 토론글은 배당금 수령에 대한 기대와 만족감을 표현하고 있으며, 배당금의 일정과 금액이 확실하다는 점에서 투자자의 안정성을 강조하는 공통된 심리를 보여줍니다. 사람들은 신뢰할 수 있는 수익 창출 방안을 확인함으로써 투자에 대한 안도감과 긍정적인 태도를 가지게 됩니다. 이는 배당금에 대한 기대와 실제 수령 경험이 투자심리 형성에 큰 영향을 미친다는 점을 보여줍니다.<br><br><span class="hashtag">#건설주</span><span class="hashtag">#단기급등</span><span class="hashtag">#차익실현</span><span class="hashtag">#관망세</span>`,
+
+ NVDA:`엔비디아는 AI 관련 수혜 기대감으로 투자자들 사이에서 긍정적인 평가를 받고 있습니다. 꾸준한 수요 전망과 반도체 업황 회복 기대가 반영되며 매수 심리가 높아지고 있습니다.<br><br><span class="hashtag">#배당금예상</span><span class="hashtag">#투자안정성</span><span class="hashtag">#수익기대</span>`
+};
+
+/* ─── 관련 리포트 데이터 ─── */
+const reports = {
+ TSLL:[
+   {title:'서울식품, OEM·B2B 다각화로 실적 개선 기대', firm:'KB증권'},
+   {title:'소비 트렌드 변화 수혜 전망', firm:'NH투자증권'}
+ ],
+ SOXL:[
+   {title:'성신양회, 시멘트 가격 인상 효과 본격화', firm:'하나증권'}
+ ],
+ TSLA:[
+   {title:'유유제약, 신약 파이프라인 가치 재평가', firm:'미래에셋'},
+   {title:'R&D 모멘텀 점검', firm:'신한투자증권'}
+ ]
+ /* SANGJI · NVDA는 리포트 없음 */
+};
+
+/* ─── 클릭 시 출력 ─── */
+function show(key){
+ const desc = descriptions[key] || '요약 데이터가 없습니다.';
+ const list = reports[key];
+
+ let html = desc + '<hr style="border:0;border-top:1px solid #333;margin:18px 0">';
+ if(list && list.length){
+   html += '<strong>관련 리포트</strong><ul style="margin-top:10px;display:grid;row-gap:6px">';
+   list.forEach(r=>{
+     html += `<li>• ${r.title} <span style="color:var(--txt-sub)">(${r.firm})</span></li>`;
+   });
+   html += '</ul>';
+ }else{
+   html += '<span style="color:var(--txt-sub)">관련 리포트가 없습니다.</span>';
+ }
+ document.getElementById('descBox').innerHTML = html;
+}
+</script>
+
+</body>
+</html>
