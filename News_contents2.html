@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BuzzBit – 뉴스 상세</title>
+
+<style>
+/* ───── 다크 테마 토큰 ───── */
+:root{
+  --bg:#0e0e0e;          /* 전체 배경 */
+  --txt:#f4f4f5;         /* 기본 텍스트 */
+  --txt-sub:#a1a1aa;     /* 서브 텍스트 */
+  --card:#1a1a1a;        /* 카드/본문 배경 */
+  --card-hover:#222;     /* 호버 */
+  --accent:#0ea5e9;      /* 링크 · 포커스 */
+  --border:#27272a;
+  --radius:14px;
+}
+
+/* ───── Reset & Base ───── */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--bg);color:var(--txt);
+  font-family:'Pretendard','Noto Sans KR',sans-serif;
+  line-height:1.7;padding:24px
+}
+h1{font-size:clamp(1.4rem,4vw,1.9rem);font-weight:700;
+   margin-bottom:10px;word-break:keep-all}
+.meta{font-size:.85rem;color:var(--txt-sub);margin-bottom:28px}
+
+p{margin-bottom:18px;word-break:keep-all}
+figure{margin:34px 0;text-align:center}
+figcaption{font-size:.75rem;color:var(--txt-sub);margin-top:8px}
+
+img.responsive{width:100%;max-width:680px;
+  height:auto;border-radius:var(--radius);object-fit:cover;box-shadow:0 4px 10px rgba(0,0,0,.4)}
+
+/* ───── 관련 리포트 ───── */
+.report-box{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);padding:26px;margin-top:48px
+}
+.report-title{font-size:1.05rem;font-weight:700;margin-bottom:18px}
+.report-list{display:grid;row-gap:12px}
+.report-link{
+  display:inline-block;color:var(--txt);text-decoration:none;
+  transition:color .25s;
+}
+.report-link:hover{color:var(--accent)}
+.report-firm{color:var(--txt-sub);font-size:.85rem;margin-left:6px}
+
+/* ───── 반응형 ───── */
+@media(min-width:768px){
+  body{padding:40px}
+}
+
+/* ───── 포커스 상태 ───── */
+a:focus-visible{outline:2px dashed var(--accent);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<main style="max-width:760px;margin:0 auto">
+
+  <!-- ───── 제목/메타 ───── -->
+  <article>
+    <h1>[시간외 특징주] 시공테크 급등, 한덕수 ‘5월 1일 대선 출마 유력’ 무소속 출마 현실화될까</h1>
+    <div class="meta">2025.04.30 17:38 · 황진영</div>
+
+    <!-- ───── 본문 ───── -->
+    <p>시공테크(020710)의 주가가 시간외 단일가에서 상승하며, 투자자들의 관심을 모으고 있다.</p>
+
+    <p>30일 한국거래소에 따르면, 이날 시공테크의 주가는 오후 5시 10분 기준 종가 대비 5.49% 급등한 8260원에 거래되고 있다.</p>
+
+    <p>이는 한덕수 대통령 권한대행 및 국무총리가 다음달 1일 대선 출마를 위해 사퇴한다는 소식이 전해지자 관련주로 매수세가 몰리는 것으로 풀이된다.</p>
+
+    <p>30일 정부 관계자들에 따르면 한덕수 권한대행이 5월 1일 오전까지 일정을 소화하고 오후에 사퇴하는 방안을 유력하게 검토하고 있는 것으로 알려졌다. 출마 선언은 사퇴 다음날인 2일로 추정되고 있다.</p>
+    
+    <p>또한 업계에서는 한 권한대행이 출마와 동시에 대국민 메시지를 발표할 것으로 보고 있다. 메시지는 국민적 통합에 방점을 찍고 차기 대통령 임기 단축과 분권형 개헌 추진, 거국 내각 구성 등이 포함될 것으로 관측된다.</p>
+    
+    <p>이런 가운데 최상목 부총리 겸 기획재정부 장관은 이날 국회 기획재정위원회 전체 회의에서 한 대행으로부터 대선 출마 관련 언질을 받았냐는 질의에 "전혀 없었다"고 밝혔다.</p>
+    
+    <p>이에 정치권에서는 한 권한대행이 무소속으로 대선에 출마할 수 있다는 분석이 나오고 있다. 한 대행이 출마하면 최상목 부총리는 대통령 권한대행직을 넘겨받아 6월 3일 대선까지 약 5주 동안 국정을 책임질 전망이다.</p>
+    
+    <p>한 대행은 최근 여의도에 사무실을 마련하고 본격적인 대선 채비에 나선 상태다. 이는 국민의힘 나경원 의원이 대선 경선 때 사용하던 맨하탄21 빌딩의 사무실로 대선 출마와 함께 이곳이 대선 캠프가 될 것으로 예상된다.</p>
+    
+    <p>해당 소식에 시공테크가 투자자들의 관심을 받고 있는 것으로 관측된다. 시공테크는 최대 주주인 박기석 회장이 2008년 국무총리였던 한 대행과 함께 대통령직속 국민경제자문회 민간위원으로 활동한 이력이 알려지면서 '한덕수 테마주'로 분류됐다.</p>
+    
+    <p>시공테크는 1988년 전시문화산업 전문기업으로 설립돼 1999년 코스닥에 상장했다. 박물관, 과학관, 전시관, 테마파크 등 전시문화시설과 인테리어시설의 설계 및 제작·설치를 주요 사업으로 영위하고 있으며, 서울올림픽 레이저쇼를 시작으로 지금까지 1,000여 곳의 전시시설을 구축해왔다. 지식과 정보, 기술, 창의력을 기반으로 전시물의 기획부터 설계, 제작·설치, 영상 제작까지 통합 수행하며, 무차입 경영을 유지하는 등 건전한 재무 구조를 갖추고 있다.</p>
+  </article>
+
+  <!-- ───── 관련 리포트 ───── -->
+  <section class="report-box">
+    <h2 class="report-title">관련 리포트</h2>
+    <ul class="report-list">
+      <li style="color:var(--txt-sub); font-size:.9rem;">관련 리포트가 없습니다.</li>
+    </ul>
+  </section>
+  
+</main>
+</body>
+</html>

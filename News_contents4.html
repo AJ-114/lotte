@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BuzzBit – 뉴스 상세</title>
+
+<style>
+/* ───── 다크 테마 토큰 ───── */
+:root{
+  --bg:#0e0e0e;          /* 전체 배경 */
+  --txt:#f4f4f5;         /* 기본 텍스트 */
+  --txt-sub:#a1a1aa;     /* 서브 텍스트 */
+  --card:#1a1a1a;        /* 카드/본문 배경 */
+  --card-hover:#222;     /* 호버 */
+  --accent:#0ea5e9;      /* 링크 · 포커스 */
+  --border:#27272a;
+  --radius:14px;
+}
+
+/* ───── Reset & Base ───── */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--bg);color:var(--txt);
+  font-family:'Pretendard','Noto Sans KR',sans-serif;
+  line-height:1.7;padding:24px
+}
+h1{font-size:clamp(1.4rem,4vw,1.9rem);font-weight:700;
+   margin-bottom:10px;word-break:keep-all}
+.meta{font-size:.85rem;color:var(--txt-sub);margin-bottom:28px}
+
+p{margin-bottom:18px;word-break:keep-all}
+figure{margin:34px 0;text-align:center}
+figcaption{font-size:.75rem;color:var(--txt-sub);margin-top:8px}
+
+img.responsive{width:100%;max-width:680px;
+  height:auto;border-radius:var(--radius);object-fit:cover;box-shadow:0 4px 10px rgba(0,0,0,.4)}
+
+/* ───── 관련 리포트 ───── */
+.report-box{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);padding:26px;margin-top:48px
+}
+.report-title{font-size:1.05rem;font-weight:700;margin-bottom:18px}
+.report-list{display:grid;row-gap:12px}
+.report-link{
+  display:inline-block;color:var(--txt);text-decoration:none;
+  transition:color .25s;
+}
+.report-link:hover{color:var(--accent)}
+.report-firm{color:var(--txt-sub);font-size:.85rem;margin-left:6px}
+
+/* ───── 반응형 ───── */
+@media(min-width:768px){
+  body{padding:40px}
+}
+
+/* ───── 포커스 상태 ───── */
+a:focus-visible{outline:2px dashed var(--accent);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<main style="max-width:760px;margin:0 auto">
+
+  <!-- ───── 제목/메타 ───── -->
+  <article>
+    <h1>[특징주] 오리엔트정공 급등, ‘공직선거법 최종 선고’ 앞두고 이재명 관련주 ‘활활’</h1>
+    <div class="meta">2025.04.30 16:20 · 황진영</div>
+
+    <!-- ───── 본문 ───── -->
+    <p>오리엔트정공(065500)의 주가가 급등하며 시장의 주목을 받았다.</p>
+
+    <p>30일 한국거래소에 따르면 오리엔트정공의 주가는 전일 대비 22.12% 상승한 1만1650원에 거래 마감했다. 이는 더불어민주당 이재명 대선 후보의 공직선거법 위반 상고심 선고를 앞두고 이재명 테마주들이 주목을 받고 있는 것으로 풀이된다.</p>
+    
+    <p>대법원은 이재명 더불어민주당 대선 후보의 공직선거법 위반 상고심 사건 선고를 오는 5월 1일 TV로 생중계한다고 밝혔다. 일반적으로 전원합의체 선고는 대법원 유튜브를 통해 실시간으로 공개하지만, 이번에는 TV 생중계도 허용한 것이다.</p>
+    
+    <p>다만, 대법원 상고심은 피고인 출석 의무가 없어 이재명 후보는 출석하지 않는 것으로 전해졌다.</p>
+    
+    <p>전원합의체 선고가 이뤄지는 대법정은 대법원 2층에 위치한 약 160석 규모이며, 이 중 일반인 방청석은 73석으로 제한돼 있다. 방청 신청은 이날 오후 3시까지 마감됐다.</p>
+    
+    <p>앞서 이재명 후보는 지난 2021년 대선 후보 신분으로 방송에 출연해 故 김문기 전 성남도시개발공사 개발1처장을 모른다고 발언했고, 이후 국정감사에서는 성남시 백현동 한국식품연구원 부지 용도변경 과정에 국토교통부의 협박이 있었다고 말해 허위사실 공표 혐의로 기소됐다.</p>
+    
+    <p>1심 재판부는 유죄를 인정해 징역 1년에 집행유예 2년을 선고했으나, 2심에서는 이 후보 발언이 ‘인식’ 또는 ‘의견 표명’에 불과하다고 판단하며 전부 무죄를 선고했다.</p>
+    
+    <p>이재명 후보의 최종 판결에 귀추가 주목된다. 무죄가 선고되면 대선 행보를 이어갈 수 있지만, 유죄가 확정되면 향후 정치 일정에 상당한 제약이 불가피할 전망이다.</p>
+    
+    <p>해당 소식에 오리엔트정공을 비롯한 이재명 테마주가 강세를 보였다. 형지글로벌은 30.00%, 상지건설 29.98%, 형지I&C 29.94%, 이스타코 19.94%, 동신건설 17.11% 상승 마감했다.</p>
+    
+    <p>오리엔트정공은 자동차 부품 업체로, 과거 이재명 더불어민주당 대표가 같은 계열사인 오리엔트시계에 근무한 이력이 있어 관련주로 분류된다.</p>
+    
+    <p>오리엔트정공은 자동차 수동변속기 및 엔진 부품 하우징, 서모스탯 등을 생산하는 자동차 부품 전문기업이다. 현대자동차 협력업체로서 자동화 설비 투자를 통해 우수한 품질과 가격경쟁력을 확보하고 있으며, 지속적으로 신차종 부품 개발에 적극 참여하고 있다.</p>
+    
+  </article>
+
+  <!-- ───── 관련 리포트 ───── -->
+  <section class="report-box">
+    <h2 class="report-title">관련 리포트</h2>
+    <ul class="report-list">
+      <li style="color:var(--txt-sub); font-size:.9rem;">관련 리포트가 없습니다.</li>
+    </ul>
+  </section>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BuzzBit – 뉴스 상세</title>
+
+<style>
+/* ───── 다크 테마 토큰 ───── */
+:root{
+  --bg:#0e0e0e;          /* 전체 배경 */
+  --txt:#f4f4f5;         /* 기본 텍스트 */
+  --txt-sub:#a1a1aa;     /* 서브 텍스트 */
+  --card:#1a1a1a;        /* 카드/본문 배경 */
+  --card-hover:#222;     /* 호버 */
+  --accent:#0ea5e9;      /* 링크 · 포커스 */
+  --border:#27272a;
+  --radius:14px;
+}
+
+/* ───── Reset & Base ───── */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--bg);color:var(--txt);
+  font-family:'Pretendard','Noto Sans KR',sans-serif;
+  line-height:1.7;padding:24px
+}
+h1{font-size:clamp(1.4rem,4vw,1.9rem);font-weight:700;
+   margin-bottom:10px;word-break:keep-all}
+.meta{font-size:.85rem;color:var(--txt-sub);margin-bottom:28px}
+
+p{margin-bottom:18px;word-break:keep-all}
+figure{margin:34px 0;text-align:center}
+figcaption{font-size:.75rem;color:var(--txt-sub);margin-top:8px}
+
+img.responsive{width:100%;max-width:680px;
+  height:auto;border-radius:var(--radius);object-fit:cover;box-shadow:0 4px 10px rgba(0,0,0,.4)}
+
+/* ───── 관련 리포트 ───── */
+.report-box{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);padding:26px;margin-top:48px
+}
+.report-title{font-size:1.05rem;font-weight:700;margin-bottom:18px}
+.report-list{display:grid;row-gap:12px}
+.report-link{
+  display:inline-block;color:var(--txt);text-decoration:none;
+  transition:color .25s;
+}
+.report-link:hover{color:var(--accent)}
+.report-firm{color:var(--txt-sub);font-size:.85rem;margin-left:6px}
+
+/* ───── 반응형 ───── */
+@media(min-width:768px){
+  body{padding:40px}
+}
+
+/* ───── 포커스 상태 ───── */
+a:focus-visible{outline:2px dashed var(--accent);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<main style="max-width:760px;margin:0 auto">
+
+  <!-- ───── 제목/메타 ───── -->
+  <article>
+    <h1>LX인터내셔널, 1분기 영업이익 1169억…전년보다 5.6%↑</h1>
+    <div class="meta">2025.04.30 15:48 · 뉴시스언론보도</div>
+
+    <!-- ───── 본문 ───── -->
+    <p>[서울=뉴시스] 이창훈 기자 = LX인터내셔널은 1분기 매출 4조483억원, 영업이익 1169억원을 달성했다고 30일 공시했다.</p>
+
+    <p>이는 지난해 1분기보다 7.2% 늘었고, 영업이익은 5.6% 증가한 것이다.</p>
+    
+    <p>LX인터내셔널 관계자는 "글로벌 관세 여파 등 대외 환경에 대한 불확실성에도 니켈 광산 생산량 증대 및 팜 오일(Crude Palm Oil) 시황 상승, 물류 물동량 증가 영향으로 시장 전망치를 상회하는 실적을 달성했다"고 말했다.</p>
+    
+    <p>LX인터내셔널은 미래 수익 기반 확보를 위해 이차전지 광물을 포함한 미래 광물 자산 확보에 나서고 있다. 지난해 인수한 인도네시아 AKP 니켈 광산의 수익성을 끌어올리며 니켈 관련 추가 자산 인수를 추진하고 있다.</p>
+    
+    <p>LX인터내셔널은 사업 기반 확장을 위해 인도를 새로운 전략 지역으로 선정하는 등 지역 거점을 보강했다.</p>    
+  </article>
+
+  <!-- ───── 관련 리포트 ───── -->
+  <section class="report-box">
+    <h2 class="report-title">관련 리포트</h2>
+    <ul class="report-list">
+      <li><a href="https://aj-114.github.io/nh/bullet1_1.html"  class="report-link">장기투자 매력 보유<span class="report-firm"> (흥국증권 · 송지원)</span></a></li>
+    </ul>
+  </section>
+
+</main>
+</body>
+</html>

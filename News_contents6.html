@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BuzzBit – 뉴스 상세</title>
+
+<style>
+/* ───── 다크 테마 토큰 ───── */
+:root{
+  --bg:#0e0e0e;          /* 전체 배경 */
+  --txt:#f4f4f5;         /* 기본 텍스트 */
+  --txt-sub:#a1a1aa;     /* 서브 텍스트 */
+  --card:#1a1a1a;        /* 카드/본문 배경 */
+  --card-hover:#222;     /* 호버 */
+  --accent:#0ea5e9;      /* 링크 · 포커스 */
+  --border:#27272a;
+  --radius:14px;
+}
+
+/* ───── Reset & Base ───── */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--bg);color:var(--txt);
+  font-family:'Pretendard','Noto Sans KR',sans-serif;
+  line-height:1.7;padding:24px
+}
+h1{font-size:clamp(1.4rem,4vw,1.9rem);font-weight:700;
+   margin-bottom:10px;word-break:keep-all}
+.meta{font-size:.85rem;color:var(--txt-sub);margin-bottom:28px}
+
+p{margin-bottom:18px;word-break:keep-all}
+figure{margin:34px 0;text-align:center}
+figcaption{font-size:.75rem;color:var(--txt-sub);margin-top:8px}
+
+img.responsive{width:100%;max-width:680px;
+  height:auto;border-radius:var(--radius);object-fit:cover;box-shadow:0 4px 10px rgba(0,0,0,.4)}
+
+/* ───── 관련 리포트 ───── */
+.report-box{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);padding:26px;margin-top:48px
+}
+.report-title{font-size:1.05rem;font-weight:700;margin-bottom:18px}
+.report-list{display:grid;row-gap:12px}
+.report-link{
+  display:inline-block;color:var(--txt);text-decoration:none;
+  transition:color .25s;
+}
+.report-link:hover{color:var(--accent)}
+.report-firm{color:var(--txt-sub);font-size:.85rem;margin-left:6px}
+
+/* ───── 반응형 ───── */
+@media(min-width:768px){
+  body{padding:40px}
+}
+
+/* ───── 포커스 상태 ───── */
+a:focus-visible{outline:2px dashed var(--accent);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<main style="max-width:760px;margin:0 auto">
+
+  <!-- ───── 제목/메타 ───── -->
+  <article>
+    <h1>한화에어로, 1분기 영업익 5608억…"역대 최대 실적 달성"</h1>
+    <div class="meta">2025.04.30 15:47 · 뉴시스언론보도</div>
+
+    <!-- ───── 본문 ───── -->
+    <p>[서울=뉴시스] 신항섭 기자 = 한화에어로스페이스는 지상방산의 수출 증가와 한화오션의 자회사 편입으로 분기 기준 역대 최대 실적을 달성했다고 30일 밝혔다.</p>
+
+    <p>한화에어로스페이스의 올해 1분기 연결 기준 매출액은 전년 동기 대비 278% 증가한 5조4842억원을 기록했다. 영업이익은 전년 동기 대비 3060% 급증한 5608억원으로 집계됐다.</p>
+    
+    <p>사업별로는 지상방산 부문이 매출 1조1575억원, 영업이익 3019억원으로 나타났다. 이는 전년 동기 대비로 매출이 77% 증가했고, 영업이익은 흑자 전환이다.</p>
+    
+    <p>회사 측은 "유럽향 K9 자주포, 천무 다연장로켓의 수출이 늘어나는 가운데 생산성 향상과 원∙달러 환율 상승이 실적 견인에 한 몫 했다"고 설명했다.</p>
+    
+    <p>항공 사업은 지난해 같은 기간 대비 매출은 24% 늘어난 5309억원, 영업이익은 43% 증가한 36억원으로 집계됐다.</p>
+    
+    <p>자회사인 한화시스템은 방산 부문의 수출 증대로 매출 6901억원, 영업이익 582억원을 기록했다.</p>
+    
+    <p>한화오션은 상선사업부의 액화천연가스(LNG)선 매출이 견조하게 유지되며 매출 3조1431억원, 영업이익 2586억원을 달성했다.</p>
+    
+    <p>한화에어로스페이스 관계자는 "한화오션의 자회사 편입을 계기로 방산3사의 역량을 결집된 통합솔루션을 제시해 해외 사업을 본격화 할 것"이라며 "유럽의 방산블록화에 대응하기 위한 현지 투자도 강화해 지속적인 성장으로 주주가치를 극대화하겠다"고 말했다.</p>
+    
+  </article>
+
+  <!-- ───── 관련 리포트 ───── -->
+  <section class="report-box">
+    <h2 class="report-title">관련 리포트</h2>
+    <ul class="report-list">
+      <li><a href="https://aj-114.github.io/nh/bullet1_1.html"  class="report-link">바닥인데 이 정도<span class="report-firm"> (한국투자증권 · 장남현)</span></a></li>
+    </ul>
+  </section>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BuzzBit – 뉴스 상세</title>
+
+<style>
+/* ───── 다크 테마 토큰 ───── */
+:root{
+  --bg:#0e0e0e;          /* 전체 배경 */
+  --txt:#f4f4f5;         /* 기본 텍스트 */
+  --txt-sub:#a1a1aa;     /* 서브 텍스트 */
+  --card:#1a1a1a;        /* 카드/본문 배경 */
+  --card-hover:#222;     /* 호버 */
+  --accent:#0ea5e9;      /* 링크 · 포커스 */
+  --border:#27272a;
+  --radius:14px;
+}
+
+/* ───── Reset & Base ───── */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--bg);color:var(--txt);
+  font-family:'Pretendard','Noto Sans KR',sans-serif;
+  line-height:1.7;padding:24px
+}
+h1{font-size:clamp(1.4rem,4vw,1.9rem);font-weight:700;
+   margin-bottom:10px;word-break:keep-all}
+.meta{font-size:.85rem;color:var(--txt-sub);margin-bottom:28px}
+
+p{margin-bottom:18px;word-break:keep-all}
+figure{margin:34px 0;text-align:center}
+figcaption{font-size:.75rem;color:var(--txt-sub);margin-top:8px}
+
+img.responsive{width:100%;max-width:680px;
+  height:auto;border-radius:var(--radius);object-fit:cover;box-shadow:0 4px 10px rgba(0,0,0,.4)}
+
+/* ───── 관련 리포트 ───── */
+.report-box{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);padding:26px;margin-top:48px
+}
+.report-title{font-size:1.05rem;font-weight:700;margin-bottom:18px}
+.report-list{display:grid;row-gap:12px}
+.report-link{
+  display:inline-block;color:var(--txt);text-decoration:none;
+  transition:color .25s;
+}
+.report-link:hover{color:var(--accent)}
+.report-firm{color:var(--txt-sub);font-size:.85rem;margin-left:6px}
+
+/* ───── 반응형 ───── */
+@media(min-width:768px){
+  body{padding:40px}
+}
+
+/* ───── 포커스 상태 ───── */
+a:focus-visible{outline:2px dashed var(--accent);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<main style="max-width:760px;margin:0 auto">
+
+  <!-- ───── 제목/메타 ───── -->
+  <article>
+    <h1>이재현 CJ 회장, 트럼프 주니어와 회동 "K푸드 등 美 대규모 투자 전략 논의"</h1>
+    <div class="meta">2025.04.30 15:31 · 뉴시스언론보도</div>
+
+    <!-- ───── 본문 ───── -->
+    <p>[서울=뉴시스] 동효정 기자 = 이재현 CJ그룹 회장이 방한한 도널드 트럼프 주니어와 회동한다.</p>
+
+    <p>CJ그룹이 추진 중인 대규모 미국 투자 및 향후 현지 사업 확대와 관련한 전략적 협의가 이뤄질 것으로 예상된다.</p>
+    
+    <p>30일 재계에 따르면 이재현 CJ그룹 회장은 이날 도널드 트럼프 주니어와 회동을 갖고 미국 내 사업 협력 방안 등에 대해 논의할 예정이다. CJ그룹 관계자는 "이재현 회장과 트럼프주니어가 미팅하는 것은 맞다"면서도 "시간은 비공개라 말하기 어렵다"고 밝혔다.</p>
+    
+    <p>CJ그룹은 최근 몇 년간 미국 현지 사업에 대규모 투자를 단행하며 북미 시장 공략에 속도를 내고 있다.</p>
+    
+    <p>CJ제일제당은 2019년 미국 식품업체 슈완스를 인수해 현재까지 20개의 식품 생산기지를 미국에 보유하고 있다. 이는 CJ제일제당 해외 식품사업 매출의 80%가량을 차지하는 핵심 시장이다.</p>
+    
+    <p>지난해에는 약 7000억원을 투입해 미국 사우스다코타주 수폴스(Sioux Falls)에 '북미 아시안 푸드 신공장'을 착공했다. 2027년 완공 예정인 이 공장은 57만5000㎡(축구장 80개) 부지에 만두·에그롤 생산라인, 폐수처리시설, 물류센터 등을 갖춘다. 이는 북미 최대 규모의 아시안 식품 제조시설로, 미국 중부 생산거점 역할을 하게 된다.</p>
+    
+    <p>CJ푸드빌 역시 미국 조지아주에 약 700억원을 투자해 9만㎡ 규모의 냉동생지 및 케이크 생산공장을 건설 중이다. 올해 하반기 완공을 목표로 연간 1억개 이상의 생산능력을 확보해 북미 지역 뚜레쥬르 가맹점의 생산거점으로 활용할 예정이다.</p>
+    
+    <p>CJ푸드빌은 이 공장을 바탕으로 현재 150개 수준인 미국 내 뚜레쥬르 매장을 2030년까지 1000개로 확대할 계획이다.</p>
+    
+    <p>이번 회동에서는 CJ가 추진 중인 대규모 미국 투자가 트럼프 대통령의 '미국 우선주의(America First)' 정책과 일치하는 만큼, 향후 CJ의 미국 내 사업 확대와 관련한 협력 방안과 전략적 방향에 대한 논의가 이루어질 것으로 예상된다.</p>
+    
+    <p>이 회장은 미국 내 투자 확대와 현지 생산 전략 등에 대해 설명할 전망이다. 향후 미국 내 사업 확대를 위한 구체적인 협력 방안에 대해서도 논의할 가능성이 높다.</p>
+    
+    <p>특히, 트럼프 정부 출범으로 한미 자유무역협정(FTA) 체계 하에 유지되던 식품 무관세 혜택이 보편 관세로 전환될 리스크가 제기돼 CJ는 이를 사전에 차단하기 위해 현지 생산 확대 전략을 강화하고 있는 점을 설명할 것으로 보인다.</p>
+    
+    <p>업계 관계자는 "CJ는 단순한 제품 수출을 넘어서 현지에 공장을 세워 관세 부담을 줄이고 미국 내 고용 창출 효과까지 내고 있다"며 "이번 회동은 이러한 전략을 공유하고 향후 투자 협력 방안을 논의하는 중요한 자리가 될 것"이라고 분석했다.</p>
+    
+    <p>한편 이날 트럼프 주니어 '릴레이 면담'에는 대한민국 30대 그룹 총수 20여명이 대거 참석할 것으로 알려졌다.</p>
+    
+    <p>한화그룹 오너3세 3형제인 김동관 한화그룹 부회장, 김동원 한화생명 사장, 김동선 한화갤러리아·호텔앤드리조트 미래비전총괄 부사장은 함께 총출동해 이날 오전 면담을 마친 것으로 파악된다.</p>
+    
+    <p>또 신유열 롯데그룹 부사장, 이해진 네이버 의장, 조원태 대한항공 회장, 서정진 셀트리온 회장 등도 트럼프 주니어를 찾을 것으로 알려졌다. 이재용 삼성전자 회장과 구광모 LG그룹 회장의 경우 국내에 머물고 있어 면담 참석 여부가 주목된다.</p>
+  </article>
+
+  <!-- ───── 관련 리포트 ───── -->
+  <section class="report-box">
+    <h2 class="report-title">관련 리포트</h2>
+    <ul class="report-list">
+      <li style="color:var(--txt-sub); font-size:.9rem;">관련 리포트가 없습니다.</li>
+    </ul>
+  </section>
+
+</main>
+</body>
+</html>

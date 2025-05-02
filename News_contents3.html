@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BuzzBit – 뉴스 상세</title>
+
+<style>
+/* ───── 다크 테마 토큰 ───── */
+:root{
+  --bg:#0e0e0e;          /* 전체 배경 */
+  --txt:#f4f4f5;         /* 기본 텍스트 */
+  --txt-sub:#a1a1aa;     /* 서브 텍스트 */
+  --card:#1a1a1a;        /* 카드/본문 배경 */
+  --card-hover:#222;     /* 호버 */
+  --accent:#0ea5e9;      /* 링크 · 포커스 */
+  --border:#27272a;
+  --radius:14px;
+}
+
+/* ───── Reset & Base ───── */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--bg);color:var(--txt);
+  font-family:'Pretendard','Noto Sans KR',sans-serif;
+  line-height:1.7;padding:24px
+}
+h1{font-size:clamp(1.4rem,4vw,1.9rem);font-weight:700;
+   margin-bottom:10px;word-break:keep-all}
+.meta{font-size:.85rem;color:var(--txt-sub);margin-bottom:28px}
+
+p{margin-bottom:18px;word-break:keep-all}
+figure{margin:34px 0;text-align:center}
+figcaption{font-size:.75rem;color:var(--txt-sub);margin-top:8px}
+
+img.responsive{width:100%;max-width:680px;
+  height:auto;border-radius:var(--radius);object-fit:cover;box-shadow:0 4px 10px rgba(0,0,0,.4)}
+
+/* ───── 관련 리포트 ───── */
+.report-box{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);padding:26px;margin-top:48px
+}
+.report-title{font-size:1.05rem;font-weight:700;margin-bottom:18px}
+.report-list{display:grid;row-gap:12px}
+.report-link{
+  display:inline-block;color:var(--txt);text-decoration:none;
+  transition:color .25s;
+}
+.report-link:hover{color:var(--accent)}
+.report-firm{color:var(--txt-sub);font-size:.85rem;margin-left:6px}
+
+/* ───── 반응형 ───── */
+@media(min-width:768px){
+  body{padding:40px}
+}
+
+/* ───── 포커스 상태 ───── */
+a:focus-visible{outline:2px dashed var(--accent);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<main style="max-width:760px;margin:0 auto">
+
+  <!-- ───── 제목/메타 ───── -->
+  <article>
+    <h1>[비트코인 속보] 트럼프의 '최악의 100일'… 암호화폐 우호 정책에도 불구하고 혼란만 키웠다</h1>
+    <div class="meta">2025.04.30 16:44 · 정용현</div>
+
+    <!-- ───── 본문 ───── -->
+    <p>도널드 트럼프 미국 대통령이 취임 100일 만에 각종 정책 혼선으로 비판에 직면했다. 암호화폐 육성을 전면에 내세운 경제정책이 핵심이었지만, 도리어 시장 불안을 부추겼고 윤리적 논란까지 불거졌다.</p>
+
+    <p>29일(현지시간) 블록체인 전문매체 코인텔레그래프는 “트럼프 대통령의 첫 100일은 역대 최악”이라는 평가가 나오고 있다고 전했다. 전 백악관 공보국장 앤서니 스카라무치는 “경제를 되살린다던 공약은 무역 갈등과 시장 혼란으로 귀결됐다”고 했다.</p>
+    
+    <p>트럼프 대통령은 취임 첫날인 1월 20일, 가상자산 기업 ‘월드리버티파이낸셜(WLFI)’이 자체 밈코인 2차 발행에 나서면서 정책 방향을 분명히 했다. 같은 날 증권거래위원회(SEC)와 상품선물거래위원회(CFTC) 수장 자리에 친암호화폐 인사를 지명했다.</p>
+    
+    <p>1월 23일에는 중앙은행 디지털화폐(CBDC) 발행을 금지하는 행정명령을 내렸다. 동시에 미국 내 암호화폐 산업 육성을 위한 전담팀을 출범시키며 “미국을 가상자산의 수도로 만들겠다”고 선언했다. 그러나 시장은 불안하게 반응했다. 투자자들은 국가 통화제도와의 충돌 가능성을 우려했고, 기존 금융권은 강하게 반발했다.</p>
+    
+    <p>2월 1일에는 중국·캐나다·멕시코에 관세를 부과하며 무역전쟁에 시동을 걸었다. 하루 뒤 캐나다와 멕시코는 보복 조치를 예고했고, 3일에는 트럼프 대통령이 일부 조치를 철회했다. 그러나 금융시장과 암호화폐 시장은 이미 크게 흔들렸다.</p>
+    
+    <p>3월 7일에는 ‘전략 비트코인 준비금’을 창설하겠다고 밝혔다. 미국 정부가 압류한 비트코인을 한데 모으는 계획이다. ‘디지털 자산 비축(Digital Asset Stockpile)’도 함께 발표됐다. 이더리움, 솔라나, XRP 등이 포함됐다.</p>
+    
+    <p>이후 WLFI는 3월 말 스테이블코인 ‘USD1’을 출시했다. 미국 국채와 현금성 자산으로 담보한 디지털화폐다. 하지만 이와 관련해 대통령과 가족이 직접 수혜를 입을 수 있다는 점에서 이해충돌 논란이 불거졌다.</p>
+    
+    <p>4월 2일 트럼프 대통령은 ‘해방의 날(Liberation Day)’이라며 모든 미국 교역국에 최소 10%의 보복관세를 부과하는 행정명령에 서명했다. 시장은 일제히 하락했다. 암호화폐 채굴업체들은 장비 수입 비용 증가로 수익성 악화를 우려했다.</p>
+    
+    <p>가장 큰 논란은 로스 울브리히트의 감형이었다. 그는 마약 밀매 사이트 ‘실크로드’ 창립자로, 무기징역을 선고받았다. 트럼프 대통령은 취임 직후 사면 결정을 내렸다. 이에 대해 민주당은 “가상자산 지지층을 겨냥한 포퓰리즘”이라고 비판했다.</p>
+    
+    <p>WLFI 관련 의혹은 더 커지고 있다. 일부 언론은 WLFI 토큰을 소유하면 30만 달러를 내고 대통령과의 저녁식사 기회를 얻을 수 있다고 보도했다. 백악관은 이를 부인했지만, 민주당 존 오소프 상원의원은 “탄핵 사유에 해당할 수 있다”고 말했다.</p>
+    
+    <p>이같은 논란에도 불구하고 트럼프 대통령은 제도화 작업을 추진 중이다. ‘STABLE 법안’은 하원을 통과했고, 상원에서는 유사한 ‘GENIUS 법안’이 위원회를 통과했다. 하지만 대통령 본인의 이권 개입 의혹이 입법 논의에 그림자를 드리우고 있다.</p>
+    
+    <p>전문가들은 향후 정책 추진력에도 차질이 불가피하다고 본다. 스카라무치는 “9조 달러가 시장에서 증발했다”며 “성급한 결정과 근거 없는 자신감이 위기를 자초했다”고 평가했다.</p>
+
+  </article>
+
+  <!-- ───── 관련 리포트 ───── -->
+  <section class="report-box">
+    <h2 class="report-title">관련 리포트</h2>
+    <ul class="report-list">
+      <li style="color:var(--txt-sub); font-size:.9rem;">관련 리포트가 없습니다.</li>
+    </ul>
+  </section>
+
+</main>
+</body>
+</html>
