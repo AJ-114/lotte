@@ -159,7 +159,7 @@ a.card-link:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 
  <!-- ▼ 커뮤니티 섹션 ------------------------------------------------ -->
  <h2>관심 급상승 커뮤니티</h2>
- <p class="meta">오늘 09:16 기준</p>
+ <p id="commDate" class="meta"></p>
 
  <ul class="comm-list" style="display:grid;row-gap:12px;margin-top:12px">
    <li class="card" onclick="show('TSLL')"><div class="rank">1</div><div class="content"><p class="headline">CJ대한통운</p></div><div class="sent neg">부정</div></li>
@@ -186,7 +186,18 @@ function renderTodayDate() {
   document.getElementById('todayHeadline').innerHTML =
     `${year}년 ${month}월 ${date}일<br>인기 급상승 뉴스 🔥`;
 }
+
+function renderCommunityDate() {
+  const now = new Date();
+  now.setDate(now.getDate() - 1); // 하루 전 날짜
+  const year = now.getFullYear();     // ← 이 줄이 빠졌을 경우 ReferenceError 발생
+  const month = now.getMonth() + 1;
+  const date = now.getDate();
+  document.getElementById('commDate').textContent = `${year}년 ${month}월 ${date}일`;
+}
+
 renderTodayDate();
+renderCommunityDate();
 
 /* ─── 토론 요약 (전체 문구) ─── */
 const descriptions = {
